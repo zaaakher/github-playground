@@ -36,6 +36,13 @@ body:
       label: "Block Code"
       description: "Provide the code for your custom block. Include all necessary imports and components."
       placeholder: 'Place your code here'
+      
+  - type: input
+    id: live_example
+    attributes:
+      label: "Live Example"
+      description: "Please provide a valid URL to a codepen, stackblitz, codeSandbox, or simply a github repo"
+      placeholder: "https://codepen.io/someURL"
 
   - type: textarea
     id: usage_instructions
