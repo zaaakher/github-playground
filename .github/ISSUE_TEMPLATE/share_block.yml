@@ -1,7 +1,6 @@
 name: "Submit a Custom Block"
 description: "Use this template to submit a new custom block (schema) for BlockNote."
-title: "[Custom Block] <Your Block Name>"
-labels: ["custom block", "enhancement"]
+title: "<Your Block Name>"
 body:
   - type: markdown
     attributes:
@@ -23,13 +22,6 @@ body:
       label: "Block Description"
       description: "Provide a detailed description of your custom block. Explain its purpose and how it works."
       placeholder: "This block is used to display alert messages with different severity levels."
-
-  - type: input
-    id: block_type
-    attributes:
-      label: "Block Type"
-      description: "Specify the type of your custom block."
-      placeholder: "e.g., alert, info"
       
   - type: textarea
     id: prop_schema
@@ -49,44 +41,7 @@ body:
     attributes:
       label: "Render Code"
       description: "Provide the code for rendering your custom block. Include all necessary imports and components."
-      placeholder: |
-        ```javascript
-        import { createReactBlockSpec } from '@blocknote/core';
-        import { MdError, MdCancel, MdInfo, MdCheckCircle } from 'react-icons/md';
-
-        const alertTypes = [
-          { title: "Warning", value: "warning", icon: MdError, color: "#e69819", backgroundColor: { light: "#fff6e6", dark: "#805d20" } },
-          { title: "Error", value: "error", icon: MdCancel, color: "#d80d0d", backgroundColor: { light: "#ffe6e6", dark: "#802020" } },
-          { title: "Info", value: "info", icon: MdInfo, color: "#507aff", backgroundColor: { light: "#e6ebff", dark: "#203380" } },
-          { title: "Success", value: "success", icon: MdCheckCircle, color: "#0bc10b", backgroundColor: { light: "#e6ffe6", dark: "#208020" } },
-        ];
-
-        const Alert = createReactBlockSpec(
-          {
-            type: "alert",
-            propSchema: {
-              textAlignment: { default: "left", values: ["left", "center", "right"] },
-              type: { default: "warning", values: ["warning", "error", "info", "success"] },
-            },
-            content: "inline",
-          },
-          {
-            render: (props) => {
-              const alertType = alertTypes.find(a => a.value === props.block.props.type)!;
-              const Icon = alertType.icon;
-              return (
-                <div className={"alert"} data-alert-type={props.block.props.type}>
-                  <div className={"alert-icon-wrapper"} contentEditable={false}>
-                    <Icon className={"alert-icon"} data-alert-icon-type={props.block.props.type} size={32} />
-                  </div>
-                  <div className={"inline-content"} ref={props.contentRef} />
-                </div>
-              );
-            },
-          }
-        );
-        export default Alert;
-        ```
+      placeholder: 'Place your code here'
 
   - type: textarea
     id: usage_instructions
