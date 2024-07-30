@@ -16,7 +16,6 @@ body:
       label: "Block Name"
       description: "Enter the name of your custom block."
       placeholder: "e.g., Alert Block"
-      required: true
 
   - type: textarea
     id: block_description
@@ -24,7 +23,6 @@ body:
       label: "Block Description"
       description: "Provide a detailed description of your custom block. Explain its purpose and how it works."
       placeholder: "This block is used to display alert messages with different severity levels."
-      required: true
 
   - type: input
     id: block_type
@@ -32,8 +30,7 @@ body:
       label: "Block Type"
       description: "Specify the type of your custom block."
       placeholder: "e.g., alert, info"
-      required: true
-
+      
   - type: textarea
     id: prop_schema
     attributes:
@@ -46,7 +43,6 @@ body:
           "type": { "default": "info", "values": ["warning", "error", "info", "success"] }
         }
         ```
-      required: true
 
   - type: textarea
     id: render_code
@@ -91,7 +87,6 @@ body:
         );
         export default Alert;
         ```
-      required: true
 
   - type: textarea
     id: usage_instructions
@@ -104,7 +99,6 @@ body:
         2. Add it to the BlockNote editor configuration.
         3. Use it within the BlockNote editor.
         ```
-      required: true
 
   - type: textarea
     id: additional_notes
@@ -112,4 +106,3 @@ body:
       label: "Additional Notes"
       description: "Include any additional information or notes about your custom block."
       placeholder: "Any additional context or information."
-      required: false
