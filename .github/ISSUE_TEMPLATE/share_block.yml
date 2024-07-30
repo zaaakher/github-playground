@@ -42,7 +42,7 @@ body:
     attributes:
       label: "Live Example"
       description: "Please provide a valid URL to a codepen, stackblitz, codeSandbox, or simply a github repo"
-      placeholder: "https://codepen.io/someURL"
+      placeholder: "live example URL here"
 
   - type: textarea
     id: usage_instructions
