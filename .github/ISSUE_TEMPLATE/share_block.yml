@@ -24,23 +24,17 @@ body:
       placeholder: "This block is used to display alert messages with different severity levels."
       
   - type: textarea
-    id: prop_schema
+    id: block_dependencies
     attributes:
-      label: "Property Schema"
-      description: "Define the properties (props) your block supports. Include default values and possible values if applicable."
-      placeholder: |
-        ```json
-        {
-          "textAlignment": { "default": "left", "values": ["left", "center", "right"] },
-          "type": { "default": "info", "values": ["warning", "error", "info", "success"] }
-        }
-        ```
+      label: "Dependencies"
+      description: "Provide a full list of all the dependencies needed to make your custom block work."
+      placeholder: "`npm_package_1`, `npm_package_2`, ...etc  "
 
   - type: textarea
-    id: render_code
+    id: block_code
     attributes:
-      label: "Render Code"
-      description: "Provide the code for rendering your custom block. Include all necessary imports and components."
+      label: "Block Code"
+      description: "Provide the code for your custom block. Include all necessary imports and components."
       placeholder: 'Place your code here'
 
   - type: textarea
